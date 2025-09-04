@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useToast } from "@chakra-ui/react";
+import { useProductStore } from "../store/productStore";
 import {
   Container,
   VStack,
@@ -15,10 +17,24 @@ const CreatePage = () => {
     price: "",
     image: "",
   });
-
-  const handleAddProduct = () => {
-    console.log(newProduct);
-    // You can add API call here to save the product
+  const toast = useToast();
+  const { createProduct } = useProductStore();
+  const handleAddProduct = async () => {
+    const { success, message } = await createProduct(newProduct);
+    if (!success) {
+      toast({
+        title: "Error",
+        description: message,
+        status: "error",
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: message,
+        status: "success",
+      });
+    }
+    setNewProduct({ name: "", price: "", image: "" });
   };
 
   return (
