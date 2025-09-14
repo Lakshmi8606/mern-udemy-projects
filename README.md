@@ -5,29 +5,30 @@ Each subfolder is a separate project with its own backend & frontend.
 
 ---
 
-## 📂 Folder Structure
-mern-udemy-projects/
-│
-└── product-store/             # Project 1: Product Store App (CRUD)
-    ├── backend/               # Node.js + Express + MongoDB
-    │   ├── config/            # Database connection (db.js)
-    │   ├── controllers/       # Controller logic
-    │   ├── models/            # Mongoose models (e.g., Product)
-    │   ├── routes/            # Express routes
-    │   ├── .env               # Environment variables
-    │   └── server.js          # Express app entry point
-    │
-    └── frontend/              # React + Vite + Zustand
-        ├── public/            # Static assets
-        ├── src/               # React source code
-        │   ├── components/    # Reusable UI components
-        │   ├── pages/         # Pages (Home, Create, etc.)
-        │   ├── store/         # Zustand store for global state
-        │   ├── App.jsx        # Main app component
-        │   ├── main.jsx       # React entry point
-        │   └── index.css      # Global styles
-        │
-        └── index.html         # Vite entry file
+## 📂 Folder Structure  
+
+```  
+mern-udemy-projects/  
+└── product-store/  
+    ├── backend/  
+    │   ├── config/          # Database connection (db.js)  
+    │   ├── controllers/     # Controller logic  
+    │   ├── models/          # Mongoose models (e.g., Product)  
+    │   ├── routes/          # Express routes  
+    │   ├── .env             # Environment variables  
+    │   └── server.js        # Express app entry point  
+    │  
+    └── frontend/  
+        ├── public/          # Static assets  
+        └── src/             # React source code  
+            ├── components/  # Reusable UI components  
+            ├── pages/       # Page components (Home, Create, etc.)  
+            ├── store/       # Zustand global store  
+            ├── App.jsx      # Root React component  
+            ├── main.jsx     # Entry point  
+            └── index.css    # Global styles  
+```  
+
 
 
 A full-stack MERN CRUD application where users can:  
